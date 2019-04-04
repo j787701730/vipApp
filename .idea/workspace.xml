@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0182e8c8-14f9-470c-97ce-22edda19876c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vipApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/weather/citys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/weather/history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/weather/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/weather/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/weather/util.js" afterDir="false" />
+    <list default="true" id="0182e8c8-14f9-470c-97ce-22edda19876c" name="Default Changelist" comment="初始化 添加天气">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/weather/citys.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/weather/citys.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/weather/history.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/weather/history.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/weather/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/weather/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/weather/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/weather/util.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,21 +18,49 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project.config.json">
+        <entry file="file://$PROJECT_DIR$/src/pages/weather/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="494" column="93" lean-forward="true" selection-start-line="494" selection-start-column="93" selection-end-line="494" selection-end-column="93" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+                <element signature="e#1016#11335#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/weather/history.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="54" column="97" selection-start-line="54" selection-start-column="97" selection-end-line="54" selection-end-column="97" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/weather/util.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+              <caret line="4" column="92" lean-forward="true" selection-start-line="4" selection-start-column="92" selection-end-line="4" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/weapp/project.config.json">
+        <entry file="file://$PROJECT_DIR$/src/pages/weather/citys.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <state relative-caret-position="1061">
+              <caret line="252" column="94" selection-start-line="252" selection-start-column="94" selection-end-line="252" selection-end-column="94" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,10 +82,12 @@
       <find>_navToHome</find>
       <find>touristappid</find>
       <find>new Da</find>
+      <find>#eee</find>
     </findStrings>
     <replaceStrings>
       <replace>:</replace>
       <replace>50%</replace>
+      <replace>rgba(238,238,238,0.5)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -74,17 +97,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/pages/weather/utils.js" />
-        <option value="$PROJECT_DIR$/src/pages/weather/util.js" />
         <option value="$PROJECT_DIR$/config/index.js" />
         <option value="$PROJECT_DIR$/src/app.scss" />
-        <option value="$PROJECT_DIR$/src/pages/weather/citys.js" />
         <option value="$PROJECT_DIR$/weapp/project.config.json" />
         <option value="$PROJECT_DIR$/src/app.js" />
         <option value="$PROJECT_DIR$/src/pages/weather/index.scss" />
-        <option value="$PROJECT_DIR$/src/pages/weather/index.js" />
         <option value="$PROJECT_DIR$/src/pages/index/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/weather/history.js" />
         <option value="$PROJECT_DIR$/project.config.json" />
+        <option value="$PROJECT_DIR$/src/pages/weather/util.js" />
+        <option value="$PROJECT_DIR$/src/pages/weather/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/weather/history.js" />
+        <option value="$PROJECT_DIR$/src/pages/weather/citys.js" />
       </list>
     </option>
   </component>
@@ -94,7 +117,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1499" />
     <option name="height" value="1047" />
@@ -107,6 +130,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,11 +138,33 @@
               <item name="vipApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="vipApp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="vipApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vipApp" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vipApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vipApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vipApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vipApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vipApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vipApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -177,17 +223,19 @@
       <workItem from="1554255443423" duration="12959000" />
       <workItem from="1554274236109" duration="10427000" />
       <workItem from="1554340387566" duration="6827000" />
-      <workItem from="1554348691303" duration="5609000" />
+      <workItem from="1554348691303" duration="5923000" />
+      <workItem from="1554363280992" duration="3390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35822000" />
+    <option name="totallyTimeSpent" value="39526000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1499" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12799452" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13909379" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -278,23 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/weather/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/weather/citys.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="194" column="10" selection-start-line="194" selection-start-column="10" selection-end-line="194" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-259">
@@ -323,17 +354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/weather/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="479" column="3" selection-start-line="479" selection-start-column="3" selection-end-line="479" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#1016#11335#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -351,13 +371,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/weather/history.js">
+    <entry file="file://$PROJECT_DIR$/weapp/project.config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="48" column="46" lean-forward="true" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="308">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -368,10 +385,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weapp/project.config.json">
+    <entry file="file://$PROJECT_DIR$/src/pages/weather/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        <state relative-caret-position="88">
+          <caret line="4" column="92" lean-forward="true" selection-start-line="4" selection-start-column="92" selection-end-line="4" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/weather/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="494" column="93" lean-forward="true" selection-start-line="494" selection-start-column="93" selection-end-line="494" selection-end-column="93" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#1016#11335#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/weather/history.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="54" column="97" selection-start-line="54" selection-start-column="97" selection-end-line="54" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/weather/citys.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1061">
+          <caret line="252" column="94" selection-start-line="252" selection-start-column="94" selection-end-line="252" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

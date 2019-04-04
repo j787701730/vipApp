@@ -2,7 +2,7 @@ import Taro, {Component} from '@tarojs/taro'
 import {View, Text, Input, Button, Icon} from '@tarojs/components'
 
 import './index.scss'
-import {ajax} from "./util";
+import {ajax,bgJpg} from "./util";
 
 const hotCitys = [
   {
@@ -173,7 +173,7 @@ export default class Index extends Component {
     // Taro.redirectTo({
     //   url: '/pages/weather/index?location=' + location
     // })
-    Taro.setStorageSync('location', el.location);
+    Taro.setStorageSync('location', el.cid);
     let history = JSON.parse(Taro.getStorageSync('history'));
     if(history.length === 0){
       history.push(el);
@@ -222,7 +222,12 @@ export default class Index extends Component {
   render() {
     const {citys} = this.state;
     return (
-      <View className='index'>
+      <View className='index' style={{
+        backgroundImage:`url(${bgJpg})`,
+        backgroundSize:"cover",
+        backgroundPosition:"center",
+      height:`${Taro.getSystemInfoSync().windowHeight}px`}}
+      >
         <View style={{padding: '10px', display: "flex", alignItems: "center"}}>
           <Input type='text' placeholder='将会获取焦点' style={{
                    border: '1px solid #ddd', width: 'calc(100% - 36px)',
@@ -245,7 +250,7 @@ export default class Index extends Component {
         </View>
         <View>
           {citys != null && citys.map((el) => {
-            return (<View key={el.cid} style={{padding:'4px 15px',borderBottom:'1px solid #eee'}}><Text onClick={
+            return (<View key={el.cid} style={{padding:'4px 15px',borderBottom:'1px solid rgba(238,238,238,0.5)'}}><Text onClick={
               this._navToHome.bind(this, el)
             }
             >{`${el.admin_area} ${el.location}`}</Text></View>)

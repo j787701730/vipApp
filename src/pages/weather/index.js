@@ -1,7 +1,7 @@
 import Taro, {Component} from '@tarojs/taro'
 import {View, Text, Image} from '@tarojs/components'
 import './index.scss'
-import {ajax} from "./util";
+import {ajax, bgJpg} from "./util";
 
 const day = {
   0: '周日',
@@ -439,8 +439,8 @@ export default class Index extends Component {
   _getData = () => {
     let location = Taro.getStorageSync('location');
     if (!location) {
-      Taro.setStorageSync('location', '福州');
-      location = '福州';
+      Taro.setStorageSync('location', 'CN101230101');
+      location = 'CN101230101';
     }
     this.setState({
       weatherData:null
@@ -469,11 +469,22 @@ export default class Index extends Component {
   render() {
     const {weatherData} = this.state;
     let height = Taro.getSystemInfoSync().windowHeight - 40;
-    return (weatherData == null ? <View /> :
-        <View className='index'>
-          <View style={{height: `${height}px`, overflow: "auto", '-webkit-overflow-scrolling': 'touch'}}>
+    return (weatherData == null ? <View  style={{
+          backgroundImage:`url(${bgJpg})`,
+          backgroundSize:"cover",
+          backgroundPosition:"center",
+          height:`${Taro.getSystemInfoSync().windowHeight}px`}}
+    /> :
+        <View className='index' style={{
+          backgroundImage:`url(${bgJpg})`,
+          backgroundSize:"cover",
+          backgroundPosition:"center"}}
+        >
+          <View style={{height: `${height}px`, overflow: "auto", '-webkit-overflow-scrolling': 'touch',
+            }}
+          >
             <View style={{textAlign: 'center'}}>
-              <Text style={{fontSize: '30px'}} onClick={this._navToCitys}>{weatherData['basic']['parent_city']}</Text>
+              <Text style={{fontSize: '30px'}} onClick={this._navToCitys}>{weatherData['basic']['location']}</Text>
             </View>
             <View style={{textAlign: 'center'}}>
               <Text>{weatherData['now']['cond_txt']}</Text>
@@ -481,7 +492,7 @@ export default class Index extends Component {
             <View style={{textAlign: 'center'}}>
               <Text style={{fontSize: '50px'}}>{`${weatherData['now']['tmp']}℃`}</Text>
             </View>
-            <View style={{display: 'flex', borderBottom: '1px solid #eee'}}>
+            <View style={{display: 'flex', borderBottom: '1px solid rgba(238,238,238,0.5)'}}>
               <View style={{width: '50%', paddingLeft: '15px'}}>
                 <Text>{weatherData ? `${day[(new Date(weatherData['daily_forecast'][0]['date']).getDay())]} 今天` : ''}</Text>
 
@@ -490,7 +501,7 @@ export default class Index extends Component {
                 <Text>{`${weatherData['daily_forecast'][0]['tmp_max']}    ${weatherData['daily_forecast'][0]['tmp_min']}`}</Text>
               </View>
             </View>
-            <View style={{width: '100%', overflow: "hidden", borderBottom: '1px solid #eee'}}>
+            <View style={{width: '100%', overflow: "hidden", borderBottom: '1px solid rgba(238,238,238,0.5)'}}>
               <View style={{wordBreak: "keep-all", whiteSpace: "nowrap", overflowX: "scroll", '-webkit-overflow-scrolling': 'touch'}}>
                 {weatherData['hourly'].map((el) => {
                   return (
@@ -522,14 +533,14 @@ export default class Index extends Component {
                 );
               })}
             </View>
-            <View style={{padding: '5px 15px', borderTop: '1px solid #eee', borderBottom: '1px solid #eee', textAlign: "justify"}}>
+            <View style={{padding: '5px 15px', borderTop: '1px solid rgba(238,238,238,0.5)', borderBottom: '1px solid rgba(238,238,238,0.5)', textAlign: "justify"}}>
               {`今天：今日${weatherData['now']['cond_txt']}。
           当前气温 ${weatherData['now']['tmp']}℃；
           最高气温 ${weatherData['daily_forecast'][0]['tmp_max']}℃，
           最低气温 ${weatherData['daily_forecast'][0]['tmp_min']}℃。`}
             </View>
 
-            <View style={{borderBottom: '1px solid #eee', padding: '6px 0'}}>
+            <View style={{borderBottom: '1px solid rgba(238,238,238,0.5)', padding: '6px 0'}}>
               <View style={{display: "flex"}}>
                 <View style={{width: '50%', textAlign: "right"}}>日出</View>
                 <View style={{width: '50%', paddingLeft: '10px'}}>{`${weatherData['daily_forecast'][0]['sr']}`}</View>

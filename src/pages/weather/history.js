@@ -1,5 +1,6 @@
 import Taro, {Component} from '@tarojs/taro'
 import {View, Text} from '@tarojs/components'
+import {bgJpg} from "./util";
 
 import './index.scss'
 
@@ -35,8 +36,8 @@ export default class History extends Component {
   componentDidHide() {
   }
 
-  _navToHome(location) {
-    Taro.setStorageSync('location', location);
+  _navToHome(cid) {
+    Taro.setStorageSync('location', cid);
     Taro.navigateBack({delta: 1})
   }
 
@@ -44,11 +45,15 @@ export default class History extends Component {
   render() {
     const {citys} = this.state;
     return (
-      <View className='index'>
+      <View className='index' style={{
+        backgroundImage:`url(${bgJpg})`,
+        backgroundSize:"cover",
+        backgroundPosition:"center",height:`${Taro.getSystemInfoSync().windowHeight}px`}}
+      >
         <View>
           {citys.length && citys.map((el) => {
-            return (<View key={el.cid} style={{padding: '4px 15px', borderBottom: '1px solid #eee'}}
-              onClick={this._navToHome.bind(this, el.location)}
+            return (<View key={el.cid} style={{padding: '4px 15px', borderBottom: '1px solid rgba(238,238,238,0.5)'}}
+              onClick={this._navToHome.bind(this, el.cid)}
             >
               <Text>{`${el.admin_area} ${el.location}`}</Text></View>)
           })}
