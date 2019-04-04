@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0182e8c8-14f9-470c-97ce-22edda19876c" name="Default Changelist" comment="初始化 添加天气">
+    <list default="true" id="0182e8c8-14f9-470c-97ce-22edda19876c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/tiku/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tiku/kemu1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tiku/util.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/weather/citys.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/weather/citys.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/weather/history.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/weather/history.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/weather/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/weather/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/weather/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/weather/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,23 +21,31 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/index/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="38" column="73" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/weather/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="494" column="93" lean-forward="true" selection-start-line="494" selection-start-column="93" selection-end-line="494" selection-end-column="93" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-                <element signature="e#1016#11335#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/weather/history.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="54" column="97" selection-start-line="54" selection-start-column="97" selection-end-line="54" selection-end-column="97" />
+            <state relative-caret-position="282">
+              <caret line="470" column="60" lean-forward="true" selection-start-line="470" selection-start-column="4" selection-end-line="470" selection-end-column="60" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -45,19 +54,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/weather/util.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/tiku/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="92" lean-forward="true" selection-start-line="4" selection-start-column="92" selection-end-line="4" selection-end-column="92" />
+            <state>
+              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/weather/citys.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/tiku/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1061">
-              <caret line="252" column="94" selection-start-line="252" selection-start-column="94" selection-end-line="252" selection-end-column="94" />
+            <state relative-caret-position="1893">
+              <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/tiku/kemu1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -83,11 +104,13 @@
       <find>touristappid</find>
       <find>new Da</find>
       <find>#eee</find>
+      <find>question</find>
     </findStrings>
     <replaceStrings>
       <replace>:</replace>
       <replace>50%</replace>
       <replace>rgba(238,238,238,0.5)</replace>
+      <replace>result</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -100,14 +123,17 @@
         <option value="$PROJECT_DIR$/config/index.js" />
         <option value="$PROJECT_DIR$/src/app.scss" />
         <option value="$PROJECT_DIR$/weapp/project.config.json" />
-        <option value="$PROJECT_DIR$/src/app.js" />
         <option value="$PROJECT_DIR$/src/pages/weather/index.scss" />
-        <option value="$PROJECT_DIR$/src/pages/index/index.js" />
         <option value="$PROJECT_DIR$/project.config.json" />
         <option value="$PROJECT_DIR$/src/pages/weather/util.js" />
         <option value="$PROJECT_DIR$/src/pages/weather/index.js" />
         <option value="$PROJECT_DIR$/src/pages/weather/history.js" />
         <option value="$PROJECT_DIR$/src/pages/weather/citys.js" />
+        <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/src/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tiku/kemu1.js" />
+        <option value="$PROJECT_DIR$/src/pages/tiku/util.js" />
+        <option value="$PROJECT_DIR$/src/pages/tiku/index.js" />
       </list>
     </option>
   </component>
@@ -159,6 +185,13 @@
               <item name="vipApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="tiku" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vipApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vipApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="weather" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -172,7 +205,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/weather" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/tiku" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -191,11 +224,12 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\code\vipApp\src\pages\weather" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\code\vipApp\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\code\vipApp\src\pages\tiku" />
+      <recent name="E:\code\vipApp\src\pages\weather" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -224,12 +258,20 @@
       <workItem from="1554274236109" duration="10427000" />
       <workItem from="1554340387566" duration="6827000" />
       <workItem from="1554348691303" duration="5923000" />
-      <workItem from="1554363280992" duration="3390000" />
+      <workItem from="1554363280992" duration="6659000" />
     </task>
+    <task id="LOCAL-00001" summary="初始化 添加天气">
+      <created>1554366760175</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554366760175</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39526000" />
+    <option name="totallyTimeSpent" value="42795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -251,7 +293,7 @@
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="RNConsole" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" visible="true" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -259,6 +301,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化 添加天气" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化 添加天气" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/yarn.lock">
@@ -354,23 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weapp/project.config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -385,20 +414,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/weather/util.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/weather/citys.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="92" lean-forward="true" selection-start-line="4" selection-start-column="92" selection-end-line="4" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/weather/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="494" column="93" lean-forward="true" selection-start-line="494" selection-start-column="93" selection-end-line="494" selection-end-column="93" />
+        <state relative-caret-position="616">
+          <caret line="229" column="7" lean-forward="true" selection-start-line="229" selection-start-column="7" selection-end-line="229" selection-end-column="7" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#1016#11335#0" />
           </folding>
         </state>
       </provider>
@@ -413,10 +434,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/weather/citys.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/weather/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1061">
-          <caret line="252" column="94" selection-start-line="252" selection-start-column="94" selection-end-line="252" selection-end-column="94" />
+        <state relative-caret-position="-44">
+          <caret line="4" column="92" lean-forward="true" selection-start-line="4" selection-start-column="92" selection-end-line="4" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/tiku/kemu1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/tiku/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="38" column="73" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/weather/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="470" column="60" lean-forward="true" selection-start-line="470" selection-start-column="4" selection-end-line="470" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/tiku/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1893">
+          <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>

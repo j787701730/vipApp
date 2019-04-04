@@ -14,9 +14,12 @@ class App extends Component {
   config = {
     pages: [
       'pages/index/index',
+      // 天气
       'pages/weather/index',
       'pages/weather/citys',
       'pages/weather/history',
+      // 驾考
+      'pages/tiku/index',
     ],
     window: {
       backgroundTextStyle: 'light',

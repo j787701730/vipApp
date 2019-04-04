@@ -23,9 +23,9 @@ export default class Index extends Component {
   componentDidHide() {
   }
 
-  navTo() {
+  navTo(url) {
     Taro.navigateTo({
-      url: '/pages/weather/index'
+      url: url
     })
   }
 
@@ -33,7 +33,10 @@ export default class Index extends Component {
     return (
       <View className='index' style={{display: "flex"}}>
         <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}>
-          <Text onClick={this.navTo}>天气</Text>
+          <Text onClick={this.navTo.bind(this, '/pages/weather/index')}>天气</Text>
+        </View>
+        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}>
+          <Text onClick={this.navTo.bind(this, '/pages/tiku/index')}>题库</Text>
         </View>
       </View>
     )
