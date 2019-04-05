@@ -101,58 +101,68 @@ export default class Index extends Component {
         }}
         >
           <View style={{
-            height: `${height}px`, overflow: "auto", '-webkit-overflow-scrolling': 'touch', padding: '15px'
+            height: `${height}px`, overflow: "auto", '-webkit-overflow-scrolling': 'touch', padding: '10px'
           }}
           >
             <View style={{textAlign: "center"}}>
               <Text>{`${page}/${result.total}`}</Text>
             </View>
-            <View>
+            <View style={{marginBottom: '6px'}}>
               <Text>题目</Text>
             </View>
-            <View>
+            <View style={{textAlign: 'justify'}}>
               <Text>{result.list[0].title}</Text>
             </View>
-            <View>
+            <View style={{marginBottom: '6px', marginTop: '6px'}}>
               <Text>答案</Text>
             </View>
-            <View style={{display: "flex", flexWrap: "wrap"}}>
+            <View style={{display: "flex", flexWrap: "wrap", marginBottom: '6px'}}>
               <Text style={{
-                marginRight: '10px', wordBreak: "keep-all", whiteSpace: "nowrap",
+                padding:'2px 4px',marginRight: '6px', wordBreak: "keep-all", whiteSpace: "nowrap",
                 background: `${result && result.list[0].val == 1 ? '#1A73E8' : ''}`,
                 color: `${result && result.list[0].val == 1 ? '#fff' : ''}`
               }}
               >{`A：${result.list[0].a}`}</Text>
               <Text style={{
-                marginRight: '10px', wordBreak: "keep-all", whiteSpace: "nowrap",
+                padding:'2px 4px',marginRight: '6px', wordBreak: "keep-all", whiteSpace: "nowrap",
                 background: `${result && result.list[0].val == 2 ? '#1A73E8' : ''}`,
                 color: `${result && result.list[0].val == 2 ? '#fff' : ''}`
               }}
               >{`B：${result.list[0].b}`}</Text>
-              <Text style={{
-                marginRight: '10px', wordBreak: "keep-all", whiteSpace: "nowrap",
-                background: `${result && result.list[0].val == 3 ? '#1A73E8' : ''}`,
-                color: `${result && result.list[0].val == 3 ? '#fff' : ''}`
-              }}
-              >{`C：${result.list[0].c}`}</Text>
-              <Text style={{
-                wordBreak: "keep-all", whiteSpace: "nowrap",
-                background: `${result && result.list[0].val == 4 ? '#1A73E8' : ''}`,
-                color: `${result && result.list[0].val == 4 ? '#fff' : ''}`
-              }}
-              >{`D：${result.list[0].d}`}</Text>
+              {result.list[0].c == ''
+                ? null
+                : <Text style={{
+                  padding:'2px 4px',marginRight: '6px', wordBreak: "keep-all", whiteSpace: "nowrap",
+                  background: `${result && result.list[0].val == 3 ? '#1A73E8' : ''}`,
+                  color: `${result && result.list[0].val == 3 ? '#fff' : ''}`
+                }}
+                >{`C：${result.list[0].c}`}</Text>
+              }
+              {result.list[0].d == ''
+                ? null
+                : <Text style={{padding:'2px 4px',
+                  wordBreak: "keep-all", whiteSpace: "nowrap",
+                  background: `${result && result.list[0].val == 4 ? '#1A73E8' : ''}`,
+                  color: `${result && result.list[0].val == 4 ? '#fff' : ''}`
+                }}
+                >{`D：${result.list[0].d}`}</Text>}
+
             </View>
 
-            <View>
+            <View style={{marginBottom: '6px'}}>
               <Text>{`正确答案：${answer[result.list[0].val]}`}</Text>
             </View>
-            <View>
-              <Text>{`解释：${result.list[0].explainText}`}</Text>
+            <View style={{marginBottom: '6px', textAlign: 'justify'}}>
+              <Text>{`${result.list[0].explainText}`}</Text>
             </View>
           </View>
 
           <View style={{display: "flex", height: '40px', borderTop: '1px solid #ddd', boxShadow: '0 -1px 2px #ddd'}}>
-            <View style={{width: '50%', lineHeight: '40px', textAlign: "center"}} onClick={this._page.bind(this, 0)}>上一题</View>
+            <View style={{
+              width: '50%', lineHeight: '40px', textAlign: "center",
+              borderRight: '1px solid #ddd'
+            }} onClick={this._page.bind(this, 0)}
+            >上一题</View>
             <View style={{width: '50%', lineHeight: '40px', textAlign: "center"}} onClick={this._page.bind(this, 1)}>下一题</View>
           </View>
         </View>

@@ -420,10 +420,7 @@ export default class Index extends Component {
   }
 
   componentDidMount() {
-    let history = Taro.getStorageSync('history');
-    if (!history) {
-      Taro.setStorageSync('history', JSON.stringify([]));
-    }
+    
   }
 
   componentWillUnmount() {

@@ -30,6 +30,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    let history = Taro.getStorageSync('history');
+    if (!history) {
+      Taro.setStorageSync('history', JSON.stringify([]));
+    }
   }
 
   componentDidShow() {
