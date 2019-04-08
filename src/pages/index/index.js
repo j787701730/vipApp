@@ -42,6 +42,11 @@ export default class Index extends Component {
         >
           <Text>题库</Text>
         </View>
+        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
+          onClick={this.navTo.bind(this, '/pages/cook/index')}
+        >
+          <Text>菜谱</Text>
+        </View>
       </View>
     )
   }

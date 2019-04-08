@@ -24,6 +24,10 @@ class App extends Component {
       'pages/tiku/kemu4',
       'pages/tiku/category',
       'pages/tiku/categoryContent',
+      // 菜谱
+      'pages/cook/index',
+      'pages/cook/cookMenu',
+      'pages/cook/cookDetail',
     ],
     window: {
       backgroundTextStyle: 'light',

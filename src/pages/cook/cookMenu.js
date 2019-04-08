@@ -2,18 +2,10 @@ import Taro, {Component} from '@tarojs/taro'
 import {View, Text, Image, Input, Button} from '@tarojs/components'
 import {ajax, bgJpg, clearNoInt} from "./util";
 
-const answer = {
-  1: 'A',
-  2: 'B',
-  3: 'C',
-  4: 'D'
-};
-
-
 export default class Index extends Component {
 
   config = {
-    navigationBarTitleText: '科目一',
+    navigationBarTitleText: '菜谱目录',
   };
 
   constructor(props) {
@@ -30,27 +22,27 @@ export default class Index extends Component {
   }
 
   componentDidMount() {
-
+    this._getData();
   }
 
   componentWillUnmount() {
   }
 
   componentDidShow() {
-    this._getData();
+
   }
 
   componentDidHide() {
   }
 
   _getData = () => {
-    // this.setState({
-    //   result : null
-    // });
+    this.setState({
+      result : null
+    });
     Taro.showLoading({
       title: 'loading'
     });
-    ajax(`https://apicloud.mob.com/tiku/kemu1/query?page=${this.state.page}&size=1`, '', false, (data) => {
+    ajax(`https://apicloud.mob.com/v1/cook/menu/search?cid=${this.$router.params.ctgId}&page=${this.state.page}&size=20`, '', false, (data) => {
 
       Taro.hideLoading();
       if (data.retCode == 200) {
@@ -101,6 +93,12 @@ export default class Index extends Component {
     setTimeout(() => this.setState({pageTemp: val}))
   }
 
+  navTo(url) {
+    Taro.navigateTo({
+      url: url
+    })
+  }
+
   render() {
     const {result, page, pageTemp} = this.state;
     let height = Taro.getSystemInfoSync().windowHeight - 40;
@@ -127,64 +125,24 @@ export default class Index extends Component {
             <View style={{textAlign: "center"}}>
               <Text>{`${page}/${result.total}`}</Text>
             </View>
-            <View style={{marginBottom: '6px'}}>
-              <Text>题目</Text>
-            </View>
-            <View style={{textAlign: 'justify'}}>
-              <Text>{result.list[0].title}</Text>
-            </View>
-            {result && result.list[0].file
-              ? <View style={{width:'100%', height:'180px',
-                background:`url(${result.list[0].file}) center no-repeat`,
-                backgroundSize:"contain"
-              }}
-              >
-              </View>
-              : null}
+            {result && result.list.map((el)=>{
+              return (
+                <View key={el.menuId} style={{display:"flex",marginBottom: '6px'}} onClick={this.navTo.bind(this,'/pages/cook/cookDetail?id='+
+                el.menuId)}
+                >
+                  <View style={{width:'100px'}}>
+                    <Image src={el.thumbnail} style={{width:'100px',height:'100px'}} mode='widthFix' />
+                  </View>
+                  <View style={{paddingLeft:'10px',width:'calc(100% - 100px)'}}>
+                    <View style={{paddingBottom:'6px'}}>{el['name']}</View>
+                    <View style={{paddingBottom:'6px',color:'#666'}}>{el['ctgTitles']}</View>
+                    <View style={{overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{el['recipe']['sumary']}</View>
+                  </View>
 
-            <View style={{marginBottom: '6px', marginTop: '6px'}}>
-              <Text>答案</Text>
-            </View>
-            <View style={{display: "flex", flexWrap: "wrap", marginBottom: '6px'}}>
-              <Text style={{
-                padding: '2px 4px', marginRight: '6px', wordBreak: "keep-all", whiteSpace: "nowrap",
-                background: `${result && result.list[0].val == 1 ? '#1A73E8' : ''}`,
-                color: `${result && result.list[0].val == 1 ? '#fff' : ''}`
-              }}
-              >{`A：${result.list[0].a}`}</Text>
-              <Text style={{
-                padding: '2px 4px', marginRight: '6px', wordBreak: "keep-all", whiteSpace: "nowrap",
-                background: `${result && result.list[0].val == 2 ? '#1A73E8' : ''}`,
-                color: `${result && result.list[0].val == 2 ? '#fff' : ''}`
-              }}
-              >{`B：${result.list[0].b}`}</Text>
-              {result.list[0].c == ''
-                ? null
-                : <Text style={{
-                  padding: '2px 4px', marginRight: '6px', wordBreak: "keep-all", whiteSpace: "nowrap",
-                  background: `${result && result.list[0].val == 3 ? '#1A73E8' : ''}`,
-                  color: `${result && result.list[0].val == 3 ? '#fff' : ''}`
-                }}
-                >{`C：${result.list[0].c}`}</Text>
-              }
-              {result.list[0].d == ''
-                ? null
-                : <Text style={{
-                  padding: '2px 4px',
-                  wordBreak: "keep-all", whiteSpace: "nowrap",
-                  background: `${result && result.list[0].val == 4 ? '#1A73E8' : ''}`,
-                  color: `${result && result.list[0].val == 4 ? '#fff' : ''}`
-                }}
-                >{`D：${result.list[0].d}`}</Text>}
+                </View>
+              )
+            })}
 
-            </View>
-
-            <View style={{marginBottom: '6px'}}>
-              <Text>{`正确答案：${answer[result.list[0].val]}`}</Text>
-            </View>
-            <View style={{marginBottom: '6px', textAlign: 'justify'}}>
-              <Text>{`${result.list[0].explainText}`}</Text>
-            </View>
             <View style={{display: "flex"}}>
               <Text style={{lineHeight: '30px'}}>跳转</Text>
               <Input style={{
