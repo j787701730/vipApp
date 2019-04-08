@@ -31,7 +31,7 @@ export default class Index extends Component {
 
   render() {
     return (
-      <View className='index' style={{display: "flex"}}>
+      <View className='index' style={{display: "flex",fontSize:'14px'}}>
         <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
           onClick={this.navTo.bind(this, '/pages/weather/index')}
         >

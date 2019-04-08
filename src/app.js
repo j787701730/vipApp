@@ -20,6 +20,10 @@ class App extends Component {
       'pages/weather/history',
       // 驾考
       'pages/tiku/index',
+      'pages/tiku/kemu1',
+      'pages/tiku/kemu4',
+      'pages/tiku/category',
+      'pages/tiku/categoryContent',
     ],
     window: {
       backgroundTextStyle: 'light',

@@ -420,7 +420,7 @@ export default class Index extends Component {
   }
 
   componentDidMount() {
-    
+
   }
 
   componentWillUnmount() {
@@ -442,7 +442,9 @@ export default class Index extends Component {
     this.setState({
       weatherData:null
     });
-    Taro.showLoading();
+    Taro.showLoading({
+      title: 'loading'
+    });
     ajax('https://free-api.heweather.net/s6/weather?location=' + location, '', false, (data) => {
       Taro.hideLoading();
       this.setState({
