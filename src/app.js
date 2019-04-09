@@ -28,6 +28,11 @@ class App extends Component {
       'pages/cook/index',
       'pages/cook/cookMenu',
       'pages/cook/cookDetail',
+      // 微信精选
+      'pages/wxArticle/index',
+      'pages/wxArticle/content',
+      // 'pages/wxArticle/cookMenu',
+      // 'pages/wxArticle/cookDetail',
     ],
     window: {
       backgroundTextStyle: 'light',
