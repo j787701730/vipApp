@@ -2,7 +2,7 @@ import Taro, {Component} from '@tarojs/taro'
 import {View, Text, Input, Button, Icon} from '@tarojs/components'
 
 import './index.scss'
-import {ajax,bgJpg} from "./util";
+import {ajax, bgJpg} from "./util";
 
 const hotCitys = [
   {
@@ -175,17 +175,17 @@ export default class Index extends Component {
     // })
     Taro.setStorageSync('location', el.cid);
     let history = JSON.parse(Taro.getStorageSync('history'));
-    if(history.length === 0){
+    if (history.length === 0) {
       history.push(el);
-      Taro.setStorageSync('history',JSON.stringify(history));
-    }else {
+      Taro.setStorageSync('history', JSON.stringify(history));
+    } else {
       let arr = [el];
       for (const o of history) {
-        if(el.cid !== o.cid){
+        if (el.cid !== o.cid) {
           arr.push(o)
         }
       }
-      Taro.setStorageSync('history',JSON.stringify(arr));
+      Taro.setStorageSync('history', JSON.stringify(arr));
     }
     Taro.navigateBack({delta: 1})
   }
@@ -194,7 +194,6 @@ export default class Index extends Component {
   _searchCity = () => {
     ajax(`https://search.heweather.net/find?group=cn&location=${this.state.location}`, '', false,
       (data) => {
-        console.log(data);
         if (data['HeWeather6'][0]['status'] === 'ok') {
           this.setState({
             citys: data['HeWeather6'][0]['basic']
@@ -223,16 +222,18 @@ export default class Index extends Component {
     const {citys} = this.state;
     return (
       <View className='index' style={{
-        backgroundImage:`url(${bgJpg})`,
-        backgroundSize:"cover",
-        backgroundPosition:"center",
-      height:`${Taro.getSystemInfoSync().windowHeight}px`}}
+        backgroundImage: `url(${bgJpg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        fontSize: '14px',
+        height: `${Taro.getSystemInfoSync().windowHeight}px`
+      }}
       >
         <View style={{padding: '10px', display: "flex", alignItems: "center"}}>
           <Input type='text' placeholder='将会获取焦点' style={{
-                   border: '1px solid #ddd', width: 'calc(100% - 36px)',
-                   height: '28px', paddingLeft: '10px', paddingRight: '10px'
-                 }}
+            border: '1px solid #ddd', width: 'calc(100% - 36px)',
+            height: '28px', paddingLeft: '10px', paddingRight: '10px'
+          }}
             onInput={this._input}
           />
           <Button size='mini' style={{padding: '5px', height: '30px', width: '30px'}}
@@ -250,7 +251,7 @@ export default class Index extends Component {
         </View>
         <View>
           {citys != null && citys.map((el) => {
-            return (<View key={el.cid} style={{padding:'4px 15px',borderBottom:'1px solid rgba(238,238,238,0.5)'}}><Text onClick={
+            return (<View key={el.cid} style={{padding: '4px 15px', borderBottom: '1px solid rgba(238,238,238,0.5)'}}><Text onClick={
               this._navToHome.bind(this, el)
             }
             >{`${el.admin_area} ${el.location}`}</Text></View>)

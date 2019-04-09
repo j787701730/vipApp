@@ -30,7 +30,7 @@ export default class History extends Component {
   }
 
   componentDidShow() {
-    console.log(this.state.citys);
+
   }
 
   componentDidHide() {
@@ -48,7 +48,8 @@ export default class History extends Component {
       <View className='index' style={{
         backgroundImage:`url(${bgJpg})`,
         backgroundSize:"cover",
-        backgroundPosition:"center",height:`${Taro.getSystemInfoSync().windowHeight}px`}}
+        backgroundPosition:"center",height:`${Taro.getSystemInfoSync().windowHeight}px`,
+        fontSize:'14px'}}
       >
         <View>
           {citys.length && citys.map((el) => {

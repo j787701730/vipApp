@@ -31,7 +31,7 @@ export default class Index extends Component {
 
   render() {
     return (
-      <View className='index' style={{display: "flex", fontSize: '14px'}}>
+      <View className='index' style={{display: "flex", fontSize: '14px',flexWrap:"wrap"}}>
         <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
           onClick={this.navTo.bind(this, '/pages/weather/index')}
         >
@@ -51,6 +51,16 @@ export default class Index extends Component {
           onClick={this.navTo.bind(this, '/pages/wxArticle/index')}
         >
           <Text>微信精选</Text>
+        </View>
+        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
+          onClick={this.navTo.bind(this, '/pages/history/index')}
+        >
+          <Text>历史今天</Text>
+        </View>
+        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
+          onClick={this.navTo.bind(this, '/pages/car/index')}
+        >
+          <Text>汽车信息</Text>
         </View>
       </View>
     )

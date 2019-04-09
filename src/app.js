@@ -31,8 +31,13 @@ class App extends Component {
       // 微信精选
       'pages/wxArticle/index',
       'pages/wxArticle/content',
-      // 'pages/wxArticle/cookMenu',
-      // 'pages/wxArticle/cookDetail',
+      // 历史上的今天
+      'pages/history/index',
+      // 汽车信息
+      'pages/car/index',
+      'pages/car/series',
+      'pages/car/detail',
+
     ],
     window: {
       backgroundTextStyle: 'light',

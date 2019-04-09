@@ -78,8 +78,6 @@ export default class Index extends Component {
           }
           this.setState({
             articles: art,
-          }, () => {
-            console.log(this.state.articles);
           });
         }
       },
@@ -100,7 +98,6 @@ export default class Index extends Component {
     if (current == cur) {
       return false;
     } else {
-      console.log(cur);
       let p = pages;
       if (p[result[cur]['cid']]) {
         this.setState({
