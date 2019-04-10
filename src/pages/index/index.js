@@ -9,6 +9,7 @@ export default class Index extends Component {
   }
 
   componentWillMount() {
+
   }
 
   componentDidMount() {
@@ -18,6 +19,7 @@ export default class Index extends Component {
   }
 
   componentDidShow() {
+
   }
 
   componentDidHide() {
@@ -30,6 +32,7 @@ export default class Index extends Component {
   }
 
   render() {
+
     return (
       <View className='index' style={{display: "flex", fontSize: '14px',flexWrap:"wrap"}}>
         <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
@@ -61,6 +64,11 @@ export default class Index extends Component {
           onClick={this.navTo.bind(this, '/pages/car/index')}
         >
           <Text>汽车信息</Text>
+        </View>
+        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
+          onClick={this.navTo.bind(this, '/pages/xinHuaDictionary/index')}
+        >
+          <Text>新华字典</Text>
         </View>
       </View>
     )

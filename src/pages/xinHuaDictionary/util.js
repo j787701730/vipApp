@@ -1,8 +1,8 @@
 import Taro from "@tarojs/taro";
 
-export const key = "&key=c10ca07640754ec3878ff6df49399eaa";
-export const bgJpg = "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-698898.png";
-// export const bgJpg = "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-237063.jpg";
+export const key = "&key=2a97d3b007e58";
+// export const bgJpg = "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-698898.png";
+export const bgJpg = "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-728382.jpg";
 
 export function ajax(url, data, toast = true, sucFun = null, failFun = null) {
   console.log(`${url}${key}`);

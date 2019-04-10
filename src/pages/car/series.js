@@ -44,14 +44,18 @@ export default class Index extends Component {
     });
     ajax(`https://apicloud.mob.com/car/seriesname/query?name=${decodeURIComponent(this.$router.params.name)}`,
       '', false, (data) => {
-      Taro.hideLoading();
-      if (data.retCode == 200) {
-        this.setState(prevState => ({
-          result: data.result,
-          top: prevState.top === 0 ? 0.1 : 0
-        }));
-      }
-    });
+        Taro.hideLoading();
+        if (data.retCode == 200) {
+          this.setState(prevState => ({
+            result: data.result,
+            top: prevState.top === 0 ? 0.1 : 0
+          }));
+        } else {
+          Taro.showToast(
+            {title: data['msg'], icon: 'none'}
+          )
+        }
+      });
   };
 
 
@@ -70,36 +74,27 @@ export default class Index extends Component {
           // backgroundImage: `url(${bgJpg})`,
           // backgroundSize: "cover",
           // backgroundPosition: "center",
-          height: `${Taro.getSystemInfoSync().windowHeight}px`
+          // height: `${Taro.getSystemInfoSync().windowHeight}px`
         }}
         />
         : <View className='index' style={{
           // backgroundImage: `url(${bgJpg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: `${Taro.getSystemInfoSync().windowHeight}px`,
+          // height: `${Taro.getSystemInfoSync().windowHeight}px`,
           fontSize: '14px',
         }}
         >
-          <ScrollView
-            style={{
-              height: `${height}px`,
-              boxSizing: "border-box"
-            }}
-            scrollY
-            scrollTop={top}
-          >
-            {result && result.map((el) => {
-              return (
-                <View key={`${el['seriesName']}`} style={{padding: '0 10px 10px', marginBottom: '10px',border:'1px solid #ddd'}}
-                  onClick={this.navTo.bind(this,`/pages/car/detail?cid=${el.carId}`)}
-                >
-                  <View style={{lineHeight: '34px', textAlign: "center", fontWeight: "bold"}}>{el['seriesName']}</View>
-                  <View style={{lineHeight: '34px', textAlign: "center", fontWeight: "bold"}}>{el['guidePrice']}</View>
-                </View>
-              )
-            })}
-          </ScrollView>
+          {result && result.map((el) => {
+            return (
+              <View key={`${el['seriesName']}`} style={{margin: '10px', border: '1px solid #ddd'}}
+                onClick={this.navTo.bind(this, `/pages/car/detail?cid=${el.carId}`)}
+              >
+                <View style={{lineHeight: '34px', textAlign: "center", fontWeight: "bold"}}>{el['seriesName']}</View>
+                <View style={{lineHeight: '34px', textAlign: "center", fontWeight: "bold"}}>{el['guidePrice']}</View>
+              </View>
+            )
+          })}
         </View>
     )
   }

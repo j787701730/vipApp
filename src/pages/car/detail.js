@@ -51,6 +51,10 @@ export default class Index extends Component {
             result: data.result,
             top: prevState.top === 0 ? 0.1 : 0
           }));
+        }else {
+          Taro.showToast(
+            {title: data['msg'],icon:'none'}
+          )
         }
       });
   };
@@ -94,7 +98,7 @@ export default class Index extends Component {
               return (
                 <View key={`${el['seriesName']}`} style={{padding: '0 10px 10px', marginBottom: '10px',}}>
                   <View style={{textAlign: "center"}}>
-                    <Image src={el['carImage']}></Image>
+                    <Image src={el['carImage']} style={{width: '100%'}}></Image>
                   </View>
                   <View style={{lineHeight: '34px', textAlign: "center", fontWeight: "bold"}}>{el['seriesName']}</View>
                   <View style={{lineHeight: '34px', textAlign: "center", fontWeight: "bold"}}>基本参数</View>

@@ -198,6 +198,10 @@ export default class Index extends Component {
           this.setState({
             citys: data['HeWeather6'][0]['basic']
           })
+        }else {
+          Taro.showToast(
+            {title: data['HeWeather6'][0]['status'],icon:'none'}
+          )
         }
       })
   }
@@ -231,8 +235,9 @@ export default class Index extends Component {
       >
         <View style={{padding: '10px', display: "flex", alignItems: "center"}}>
           <Input type='text' placeholder='将会获取焦点' style={{
-            border: '1px solid #ddd', width: 'calc(100% - 36px)',
-            height: '28px', paddingLeft: '10px', paddingRight: '10px'
+            border: '1px solid #666', width: 'calc(100% - 36px)',
+            height: '28px', paddingLeft: '10px', paddingRight: '10px',
+            minHeight:'28px'
           }}
             onInput={this._input}
           />

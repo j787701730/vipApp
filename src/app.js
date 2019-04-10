@@ -37,6 +37,8 @@ class App extends Component {
       'pages/car/index',
       'pages/car/series',
       'pages/car/detail',
+      // 新华字典
+      'pages/xinHuaDictionary/index',
 
     ],
     window: {

@@ -160,8 +160,8 @@ export default class Index extends Component {
               width: '50%', lineHeight: '40px', textAlign: "center",
               borderRight: '1px solid #ddd'
             }} onClick={this._page.bind(this, 0)}
-            >上一题</View>
-            <View style={{width: '50%', lineHeight: '40px', textAlign: "center"}} onClick={this._page.bind(this, 1)}>下一题</View>
+            >上一页</View>
+            <View style={{width: '50%', lineHeight: '40px', textAlign: "center"}} onClick={this._page.bind(this, 1)}>下一页</View>
           </View>
         </View>
     )
