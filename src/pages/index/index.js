@@ -70,6 +70,11 @@ export default class Index extends Component {
         >
           <Text>新华字典</Text>
         </View>
+        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
+          onClick={this.navTo.bind(this, '/pages/DoubanMovie/index')}
+        >
+          <Text>豆瓣电影</Text>
+        </View>
       </View>
     )
   }

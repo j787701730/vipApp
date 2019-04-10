@@ -1,35 +1,8 @@
 import Taro, {Component} from '@tarojs/taro'
-import {View, Text,} from '@tarojs/components'
+import {View,} from '@tarojs/components'
 
 
 export default class CarItem extends Component {
-
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: props.data,
-    }
-  }
-
-  componentWillMount() {
-
-  }
-
-  componentDidMount() {
-
-  }
-
-  componentWillUnmount() {
-  }
-
-  componentDidShow() {
-
-  }
-
-  componentDidHide() {
-  }
-
 
   render() {
     const {data} = this.props;

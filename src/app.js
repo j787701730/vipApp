@@ -39,6 +39,9 @@ class App extends Component {
       'pages/car/detail',
       // 新华字典
       'pages/xinHuaDictionary/index',
+      // 豆瓣电影
+      'pages/DoubanMovie/index',
+      'pages/DoubanMovie/movieDetail',
 
     ],
     window: {
