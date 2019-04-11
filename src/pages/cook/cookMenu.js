@@ -37,7 +37,7 @@ export default class Index extends Component {
 
   _getData = () => {
     this.setState({
-      result : null
+      result: null
     });
     Taro.showLoading({
       title: 'loading'
@@ -57,7 +57,10 @@ export default class Index extends Component {
   _page = (flag) => {
     let {page, result} = this.state;
     if (flag === 1) {
-      if (result && page == result.total) {
+      if (result && page == Math.ceil(result.total / 20)) {
+        Taro.showToast(
+          {title: '这是最后页了', icon: 'none'}
+        );
         return
       }
       this.setState(prevState => ({page: prevState.page + 1}), () => {
@@ -65,6 +68,9 @@ export default class Index extends Component {
       })
     } else {
       if (page === 1) {
+        Taro.showToast(
+          {title: '这是首页了', icon: 'none'}
+        );
         return
       }
       this.setState(prevState => ({page: prevState.page - 1}), () => {
@@ -115,7 +121,7 @@ export default class Index extends Component {
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: `${Taro.getSystemInfoSync().windowHeight}px`,
-          fontSize:'14px'
+          fontSize: '14px'
         }}
         >
           <View style={{
@@ -125,18 +131,19 @@ export default class Index extends Component {
             <View style={{textAlign: "center"}}>
               <Text>{`${page}/${result.total}`}</Text>
             </View>
-            {result && result.list.map((el)=>{
+            {result && result.list.map((el) => {
               return (
-                <View key={el.menuId} style={{display:"flex",marginBottom: '6px'}} onClick={this.navTo.bind(this,'/pages/cook/cookDetail?id='+
-                el.menuId)}
+                <View key={el.menuId} style={{display: "flex", marginBottom: '6px'}}
+                  onClick={this.navTo.bind(this, '/pages/cook/cookDetail?id=' +
+                        el.menuId)}
                 >
-                  <View style={{width:'100px'}}>
-                    <Image src={el.thumbnail} style={{width:'100px',height:'100px'}} mode='widthFix' />
+                  <View style={{width: '100px'}}>
+                    <Image src={el.thumbnail} style={{width: '100px', height: '100px'}} mode='widthFix' />
                   </View>
-                  <View style={{paddingLeft:'10px',width:'calc(100% - 100px)'}}>
-                    <View style={{paddingBottom:'6px'}}>{el['name']}</View>
-                    <View style={{paddingBottom:'6px',color:'#666'}}>{el['ctgTitles']}</View>
-                    <View style={{overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{el['recipe']['sumary']}</View>
+                  <View style={{paddingLeft: '10px', width: 'calc(100% - 100px)'}}>
+                    <View style={{paddingBottom: '6px'}}>{el['name']}</View>
+                    <View style={{paddingBottom: '6px', color: '#666'}}>{el['ctgTitles']}</View>
+                    <View style={{overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap"}}>{el['recipe']['sumary']}</View>
                   </View>
 
                 </View>
@@ -151,7 +158,7 @@ export default class Index extends Component {
               }} type='number' ref={this._refInput}
                 value={pageTemp} onInput={this._changePage.bind(this)}
               />
-              <Button onClick={this._jumpPage} style={{height: '30px', lineHeight: '28px',fontSize:'14px'}}>跳转</Button>
+              <Button onClick={this._jumpPage} style={{height: '30px', lineHeight: '28px', fontSize: '14px'}}>跳转</Button>
             </View>
           </View>
 

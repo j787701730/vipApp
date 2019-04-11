@@ -1,5 +1,5 @@
 import Taro, {Component} from '@tarojs/taro'
-import {View, Text, Image, Picker, ScrollView, Input, Button} from '@tarojs/components'
+import {View, Text, Image, ScrollView,} from '@tarojs/components'
 import {ajax, bgJpg,} from "./util";
 import Stras from './stars'
 
@@ -17,7 +17,8 @@ export default class Index extends Component {
       result: null,
       city: '福州',
       top: 0,
-      start: 0
+      start: 0,
+      page: 0
     }
   }
 
@@ -64,6 +65,37 @@ export default class Index extends Component {
     })
   }
 
+  _page = (flag) => {
+    let {result, page} = this.state;
+    if (flag === 1) {
+      if (result && page == Math.ceil(result.total / pageCount) - 1) {
+        Taro.showToast(
+          {title: '这是最后页了', icon: 'none'}
+        );
+        return
+      }
+      this.setState(prevState => ({
+        start: prevState.start + (prevState.page + 1) * pageCount,
+        page: prevState.page + 1
+      }), () => {
+        this._getData();
+      })
+    } else {
+      if (page === 0) {
+        Taro.showToast(
+          {title: '这是首页了', icon: 'none'}
+        );
+        return
+      }
+      this.setState(prevState => ({
+        start: prevState.start - (prevState.page + 1) * pageCount,
+        page: prevState.page - 1
+      }), () => {
+        this._getData();
+      })
+    }
+  };
+
 
   render() {
     const {result, top,} = this.state;
@@ -90,8 +122,8 @@ export default class Index extends Component {
               <View>
                 {result['subjects'].map((subject) => {
                   return (
-                    <View style={{display: "flex",marginBottom:'10px'}} key={`${subject['id']}`}
-                      onClick={this.navTo.bind(this,`/pages/DoubanMovie/movieDetail?id=${subject['id']}`)}
+                    <View style={{display: "flex", marginBottom: '10px'}} key={`${subject['id']}`}
+                      onClick={this.navTo.bind(this, `/pages/DoubanMovie/movieDetail?id=${subject['id']}`)}
                     >
                       <View style={{width: '100px'}}>
                         <Image src={subject['images']['small']} mode='aspectFit' style={{width: '100%', height: '142px'}} />
@@ -103,9 +135,9 @@ export default class Index extends Component {
                           <View><Stras stars={Number(subject.rating.stars) / 10} />
                             <Text style={{marginLeft: '6px', fontSize: "12px", color: '#999'}}>{subject.rating.average}</Text>
                           </View>}
-                          <View style={{fontSize:'12px'}}>{subject.genres.join(' ')}</View>
-                          <View style={{fontSize:'12px'}}>{subject.durations.join(' ')}</View>
-                          <View style={{fontSize:'12px'}}>{subject.pubdates.join(' ')}</View>
+                        <View style={{fontSize: '12px'}}>{subject.genres.join(' ')}</View>
+                        <View style={{fontSize: '12px'}}>{subject.durations.join(' ')}</View>
+                        <View style={{fontSize: '12px'}}>{subject.pubdates.join(' ')}</View>
 
                       </View>
                     </View>
@@ -119,15 +151,9 @@ export default class Index extends Component {
           <View style={{
             width: '50%', lineHeight: '40px', textAlign: "center",
             borderRight: '1px solid #ddd'
-          }} onClick={this.onToday}
-          >今天</View>
-          <View style={{width: '50%', lineHeight: '40px', textAlign: "center"}}>
-            <Picker mode='date' onChange={this.onDateChange}>
-              <View className='picker'>
-                日期
-              </View>
-            </Picker>
-          </View>
+          }} onClick={this._page.bind(this, 0)}
+          >上一页</View>
+          <View style={{width: '50%', lineHeight: '40px', textAlign: "center"}} onClick={this._page.bind(this, 1)}>下一页</View>
         </View>
       </View>
     )

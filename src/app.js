@@ -42,6 +42,7 @@ class App extends Component {
       // 豆瓣电影
       'pages/DoubanMovie/index',
       'pages/DoubanMovie/movieDetail',
+      'pages/DoubanMovie/videoPlay',
 
     ],
     window: {

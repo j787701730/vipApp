@@ -66,6 +66,9 @@ export default class Index extends Component {
     let {page, result} = this.state;
     if (flag === 1) {
       if (result && page == result.total) {
+        Taro.showToast(
+          {title: '这是最后页了', icon: 'none'}
+        );
         return
       }
       this.setState(prevState => ({page: prevState.page + 1}), () => {
@@ -73,6 +76,9 @@ export default class Index extends Component {
       })
     } else {
       if (page === 1) {
+        Taro.showToast(
+          {title: '这是首页了', icon: 'none'}
+        );
         return
       }
       this.setState(prevState => ({page: prevState.page - 1}), () => {
