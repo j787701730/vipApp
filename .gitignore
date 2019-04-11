@@ -8,3 +8,5 @@ node_modules/
 .idea/
 .idea
 /.idea
+/alipay
+/yarn-error.log

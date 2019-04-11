@@ -3,7 +3,7 @@ import {View, Text, Image, ScrollView,} from '@tarojs/components'
 import {ajax, bgJpg,} from "./util";
 import Stars from './stars'
 import playPng from '../../images/play.png'
-import {getDateDiff} from '../utils/common'
+import {getDateDiff} from '../../utils/common'
 
 export default class Index extends Component {
 

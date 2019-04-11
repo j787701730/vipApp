@@ -1,5 +1,5 @@
 import Taro, {Component} from '@tarojs/taro'
-import {View, Text, Button,} from '@tarojs/components'
+import {View, Text,} from '@tarojs/components'
 import './index.scss'
 
 export default class Index extends Component {
@@ -74,6 +74,11 @@ export default class Index extends Component {
           onClick={this.navTo.bind(this, '/pages/DoubanMovie/index')}
         >
           <Text>豆瓣电影</Text>
+        </View>
+        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
+          onClick={this.navTo.bind(this, '/pages/36kr/index')}
+        >
+          <Text>36氪快讯</Text>
         </View>
       </View>
     )

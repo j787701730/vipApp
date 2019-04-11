@@ -43,6 +43,10 @@ class App extends Component {
       'pages/DoubanMovie/index',
       'pages/DoubanMovie/movieDetail',
       'pages/DoubanMovie/videoPlay',
+      // 豆瓣电影
+      'pages/36kr/index',
+      'pages/36kr/content',
+      // 'pages/DoubanMovie/videoPlay',
 
     ],
     window: {
