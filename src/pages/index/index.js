@@ -80,6 +80,11 @@ export default class Index extends Component {
         >
           <Text>36氪快讯</Text>
         </View>
+        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
+          onClick={this.navTo.bind(this, '/pages/zhihu/index')}
+        >
+          <Text>知乎日报</Text>
+        </View>
       </View>
     )
   }

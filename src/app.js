@@ -46,7 +46,13 @@ class App extends Component {
       // 豆瓣电影
       'pages/36kr/index',
       'pages/36kr/content',
-      // 'pages/DoubanMovie/videoPlay',
+      // 知乎日报
+      'pages/zhihu/index',
+      'pages/zhihu/content',
+      'pages/zhihu/hot',
+      'pages/zhihu/sections',
+      'pages/zhihu/section',
+
 
     ],
     window: {
