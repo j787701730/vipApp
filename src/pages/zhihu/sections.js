@@ -90,7 +90,10 @@ export default class Index extends Component {
                 </View>
                 <View style={{
                   textAlign: "center",
-                  paddingBottom:'5px'
+                  paddingBottom:'5px',
+                  textOverflow:"ellipsis",
+                  overflow:"hidden",
+                  whiteSpace:"nowrap"
                 }}
                 >{item['name']}</View>
               </View>

@@ -117,7 +117,6 @@ view{
 .wxParse-li-text{
 
     align-items: center;
-    line-height: 20px;
 }
 
 .wxParse-li-circle{
