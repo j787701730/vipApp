@@ -52,7 +52,8 @@ class App extends Component {
       'pages/zhihu/hot',
       'pages/zhihu/sections',
       'pages/zhihu/section',
-
+      // QQ音乐
+      'pages/qqMusic/index',
 
     ],
     window: {
