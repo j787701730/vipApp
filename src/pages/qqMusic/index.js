@@ -30,7 +30,7 @@ export default class Index extends Component {
       playState: true,
       duration: innerAudioContext.duration,
       currentTime: innerAudioContext.currentTime,
-      current: 2,
+      current: 0,
       searchWord: '',
       mySongs: [],
       myPlaySongs: [],
