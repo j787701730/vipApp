@@ -438,16 +438,16 @@ export default class Index extends Component {
         >
           <View style={{height: '30px', borderBottom: '1px solid #ddd', boxShadow: '0 1px 2px #ddd', display: "flex"}}>
             <View style={{width: '25%', textAlign: "center", color: `${current === 0 ? '#31C27C' : ''}`}}
-                  onClick={this._changeCurrent.bind(this, 0)}
+              onClick={this._changeCurrent.bind(this, 0)}
             >新歌点榜</View>
             <View style={{width: '25%', textAlign: "center", color: `${current === 1 ? '#31C27C' : ''}`}}
-                  onClick={this._changeCurrent.bind(this, 1)}
+              onClick={this._changeCurrent.bind(this, 1)}
             >随机推荐</View>
             <View style={{width: '25%', textAlign: "center", color: `${current === 2 ? '#31C27C' : ''}`}}
-                  onClick={this._changeCurrent.bind(this, 2)}
+              onClick={this._changeCurrent.bind(this, 2)}
             >歌曲搜索</View>
             <View style={{width: '25%', textAlign: "center", color: `${current === 3 ? '#31C27C' : ''}`}}
-                  onClick={this._changeCurrent.bind(this, 3)}
+              onClick={this._changeCurrent.bind(this, 3)}
             >我的收藏</View>
           </View>
           <ScrollView
@@ -473,7 +473,7 @@ export default class Index extends Component {
                                 {i + 1}
                               </View>
                               <View style={{width: 'calc(100% - 67px)', padding: '0 10px'}}
-                                    onClick={this.changUrl.bind(this, list)}
+                                onClick={this.changUrl.bind(this, list)}
                               >
                                 <View style={{
                                   textOverflow: "ellipsis",
@@ -486,7 +486,7 @@ export default class Index extends Component {
                               </View>
                               <View style={{width: '37px', paddingTop: '2px'}}>
                                 <Image src={isFavorite ? heartFillPng : heartPng} style={{width: '32px', height: '32px'}}
-                                       onClick={this._favoriteSong.bind(this, list, '', !isFavorite)}
+                                  onClick={this._favoriteSong.bind(this, list, '', !isFavorite)}
                                 />
                               </View>
                             </View>
@@ -507,7 +507,7 @@ export default class Index extends Component {
                                 {i + 1}
                               </View>
                               <View style={{width: 'calc(100% - 67px)', paddingLeft: '10px'}}
-                                    onClick={this.changUrl.bind(this, list)}
+                                onClick={this.changUrl.bind(this, list)}
                               >
                                 <View style={{
                                   textOverflow: "ellipsis",
@@ -520,7 +520,7 @@ export default class Index extends Component {
                               </View>
                               <View style={{width: '37px', paddingTop: '2px'}}>
                                 <Image src={isFavorite ? heartFillPng : heartPng} style={{width: '32px', height: '32px'}}
-                                       onClick={this._favoriteSong.bind(this, list, '', !isFavorite)}
+                                  onClick={this._favoriteSong.bind(this, list, '', !isFavorite)}
                                 />
                               </View>
                             </View>
@@ -539,12 +539,12 @@ export default class Index extends Component {
                       height: '28px', paddingLeft: '10px', paddingRight: '10px',
                       minHeight: '28px'
                     }}
-                           onInput={this._input}
+                      onInput={this._input}
                     />
                     <Button size='mini' style={{padding: '5px', height: '30px', width: '30px'}}
-                            onClick={this._searchCity}
+                      onClick={this._searchCity}
                     >
-                      <Icon size='20' type='search'/></Button>
+                      <Icon size='20' type='search' /></Button>
                   </View>
                   {resultSearch ? <View>
                     {resultSearch['song']['list'].map((list, i) => {
@@ -555,7 +555,7 @@ export default class Index extends Component {
                             {i + 1}
                           </View>
                           <View style={{width: 'calc(100% - 67px)', paddingLeft: '10px'}}
-                                onClick={this.changUrl.bind(this, list, 'search', 1)}
+                            onClick={this.changUrl.bind(this, list, 'search', 1)}
                           >
                             <View style={{
                               textOverflow: "ellipsis",
@@ -568,7 +568,7 @@ export default class Index extends Component {
                           </View>
                           <View style={{width: '37px', paddingTop: '2px'}}>
                             <Image src={isFavorite ? heartFillPng : heartPng} style={{width: '32px', height: '32px'}}
-                                   onClick={this._favoriteSong.bind(this, list, 'search', !isFavorite)}
+                              onClick={this._favoriteSong.bind(this, list, 'search', !isFavorite)}
                             />
                           </View>
                         </View>
@@ -585,7 +585,7 @@ export default class Index extends Component {
                               {i + 1}
                             </View>
                             <View style={{width: 'calc(100% - 67px)', paddingLeft: '10px'}}
-                                  onClick={this.changUrl.bind(this, list, 'search')}
+                              onClick={this.changUrl.bind(this, list, 'search')}
                             >
                               <View style={{
                                 textOverflow: "ellipsis",
@@ -598,7 +598,7 @@ export default class Index extends Component {
                             </View>
                             <View style={{width: '37px', paddingTop: '2px'}}>
                               <Image src={closePng} style={{width: '32px', height: '32px'}}
-                                     onClick={this._deleteSong.bind(this, list)}
+                                onClick={this._deleteSong.bind(this, list)}
                               />
                             </View>
                           </View>
@@ -614,7 +614,7 @@ export default class Index extends Component {
                               {i + 1}
                             </View>
                             <View style={{width: 'calc(100% - 67px)', paddingLeft: '10px'}}
-                                  onClick={this.changUrl.bind(this, list, 'search')}
+                              onClick={this.changUrl.bind(this, list, 'search')}
                             >
                               <View style={{
                                 textOverflow: "ellipsis",
@@ -627,7 +627,7 @@ export default class Index extends Component {
                             </View>
                             <View style={{width: '37px', paddingTop: '2px'}}>
                               <Image src={closePng} style={{width: '32px', height: '32px'}}
-                                     onClick={this._deletePlaySong.bind(this, list)}
+                                onClick={this._deletePlaySong.bind(this, list)}
                               />
                             </View>
                           </View>
@@ -642,7 +642,7 @@ export default class Index extends Component {
           {myPlaySongs.length
             ? <View style={{display: "flex", height: '40px', borderTop: '1px solid #ddd', boxShadow: '0 -1px 2px #ddd'}}>
               <View style={{width: '40px', marginTop: '4px', paddingLeft: '4px'}} onClick={this.changePlayState.bind(this)}>
-                <Image src={playState ? pausePng : playPng} style={{width: '32px', height: '32px'}}/>
+                <Image src={playState ? pausePng : playPng} style={{width: '32px', height: '32px'}} />
               </View>
               <View style={{width: 'calc(100% - 80px)'}}>
                 <View style={{height: '24px', padding: '0 10px', display: "flex", lineHeight: '24px'}}>
@@ -659,12 +659,12 @@ export default class Index extends Component {
                   </View>
                 </View>
                 <View style={{padding: '3px 10px'}}>
-                  <Progress percent={`${currentTime * 100 / duration}`} strokeWidth={2}/>
+                  <Progress percent={`${currentTime * 100 / duration}`} strokeWidth={2} />
                 </View>
               </View>
               <View style={{width: '40px', marginTop: '4px'}}>
                 <Image src={indentPng} style={{width: '32px', height: '32px'}}
-                       onClick={this._changeCurrent.bind(this, 4)}
+                  onClick={this._changeCurrent.bind(this, 4)}
                 />
               </View>
             </View> : null}
