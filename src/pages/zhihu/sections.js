@@ -58,7 +58,6 @@ export default class Index extends Component {
   render() {
     const {result,} = this.state;
     let width = (Taro.getSystemInfoSync().windowWidth - 20) / 2 - 27;
-    console.log(width);
     return (result == null
         ? <View style={{
           // backgroundImage: `url(${bgJpg})`,

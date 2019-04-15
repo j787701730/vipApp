@@ -5,7 +5,6 @@ export const key = "&key=2a97d3b007e58";
 export const bgJpg = "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-728382.jpg";
 
 export function ajax(url, data, toast = true, sucFun = null, failFun = null) {
-  console.log(`${url}`);
   const param = {
     url: `${url}`,
     method: "get",
