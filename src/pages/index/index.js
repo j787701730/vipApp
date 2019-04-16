@@ -90,6 +90,11 @@ export default class Index extends Component {
         >
           <Text>QQ音乐</Text>
         </View>
+        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
+          onClick={this.navTo.bind(this, '/pages/tuChong/index')}
+        >
+          <Text>图虫</Text>
+        </View>
       </View>
     )
   }
