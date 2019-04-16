@@ -10,7 +10,7 @@ import indentPng from '../../images/indent.png'
 
 let innerAudioContext = Taro.createInnerAudioContext();
 const windowHeight = Taro.getSystemInfoSync().windowHeight - 30;
-let timer;
+
 let keyflag = '';
 export default class Index extends Component {
 
@@ -48,7 +48,7 @@ export default class Index extends Component {
           })
         }
       })
-      .catch((e) => {
+      .catch(() => {
         Taro.setStorageSync('mySongs', JSON.stringify([]))
       });
   }
@@ -71,13 +71,13 @@ export default class Index extends Component {
                   this.changUrl(this.state.myPlaySongs[this.state.myPlayIndex], 'search')
                 })
               })
-              .catch((e) => {
+              .catch(() => {
                 Taro.setStorageSync('myPlayIndex', 0)
               })
           })
         }
       })
-      .catch((e) => {
+      .catch(() => {
         Taro.setStorageSync('myPlaySongs', JSON.stringify([]))
       })
     this._newSongs();
@@ -115,6 +115,9 @@ export default class Index extends Component {
   }
 
   _randomSongs = () => {
+    if (this.state.resultRandom != null) {
+      return
+    }
     Taro.showLoading(
       {title: 'loading'}
     )
@@ -149,10 +152,6 @@ export default class Index extends Component {
       songname = list['data']['songname'];
       singer = list['data']['singer'][0]['name'];
     }
-
-    if (timer) {
-      clearInterval(timer);
-    }
     let url = `https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg?format=json205361747&platform=yqq&cid=205361747&songmid=${songmid}&filename=C400${songmid}.m4a&guid=126548448`
     ajax(url, '', false, (data) => {
       let vkey = data['data']['items'][0]['vkey'];
@@ -184,22 +183,10 @@ export default class Index extends Component {
         height: windowHeight - 40,
         myPlaySongs: myPlaySongs,
         myPlayIndex: myPlayIndex
+      },()=>{
+        this._initPlay(`http://ws.stream.qqmusic.qq.com/C400${songmid}.m4a?fromtag=0&guid=126548448&vkey=${vkey}`)
       });
-      this._initPlay(`http://ws.stream.qqmusic.qq.com/C400${songmid}.m4a?fromtag=0&guid=126548448&vkey=${vkey}`)
     });
-  }
-
-  _timer = () => {
-    this.setState({
-      duration: innerAudioContext.duration,
-      currentTime: innerAudioContext.currentTime,
-    })
-    timer = setInterval(() => {
-      this.setState({
-        duration: innerAudioContext.duration,
-        currentTime: innerAudioContext.currentTime,
-      })
-    }, 1000)
   }
 
   _initPlay = (url) => {
@@ -214,16 +201,18 @@ export default class Index extends Component {
       this.setState({
         height: windowHeight - 40,
       })
-      if (timer) {
-        clearInterval(timer);
-      }
-      this._timer();
+
+      innerAudioContext.onTimeUpdate(() => {
+        this.setState({
+          duration: innerAudioContext.duration,
+          currentTime: innerAudioContext.currentTime,
+        })
+      })
     })
     innerAudioContext.onError((res) => {
-      console.log(res.errMsg);
-      console.log(res.errCode);
+      Taro.showToast({title: `${res.errCode}:${res.errMsg}`, icon: 'none'})
     })
-    innerAudioContext.onEnded((res) => {
+    innerAudioContext.onEnded(() => {
       let {myPlayIndex, myPlaySongs} = this.state;
       if (myPlayIndex === myPlaySongs.length - 1) {
         myPlayIndex = 0;
@@ -237,18 +226,20 @@ export default class Index extends Component {
         this.changUrl(myPlaySongs[myPlayIndex], 'search')
       })
     })
+
+
   }
 
   _pause = () => {
     innerAudioContext.pause();
     innerAudioContext.onPause(() => {
       console.log('暂停播放');
+      innerAudioContext.offTimeUpdate();
     })
     innerAudioContext.onError((res) => {
-      console.log(res.errMsg);
-      console.log(res.errCode);
+      Taro.showToast({title: `${res.errCode}:${res.errMsg}`, icon: 'none'})
     })
-    clearInterval(timer)
+    //
   }
 
   changePlayState = () => {
@@ -388,13 +379,12 @@ export default class Index extends Component {
     }
     Taro.setStorageSync('myPlayIndex', myPlayIndex);
     Taro.setStorageSync('myPlaySongs', JSON.stringify(myPlaySongs));
-    console.log('------');
     this.setState({
       myPlayIndex: myPlayIndex,
       myPlaySongs: myPlaySongs
     }, () => {
       if (this.state.myPlaySongs.length) {
-        this.changUrl(this.state.myPlaySongs[myPlayIndex], 'search')
+        this.changUrl(this.state.myPlaySongs[this.state.myPlayIndex], 'search')
       }
     })
 
