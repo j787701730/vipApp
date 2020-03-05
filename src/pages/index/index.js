@@ -1,101 +1,178 @@
-import Taro, {Component} from '@tarojs/taro'
-import {View, Text,} from '@tarojs/components'
-import './index.scss'
+import Taro, { Component } from "@tarojs/taro";
+import { View, Text } from "@tarojs/components";
+import "./index.scss";
 
 export default class Index extends Component {
-
   config = {
-    navigationBarTitleText: '首页'
-  }
+    navigationBarTitleText: "首页"
+  };
 
-  componentWillMount() {
+  componentWillMount() {}
 
-  }
+  componentDidMount() {}
 
-  componentDidMount() {
-  }
+  componentWillUnmount() {}
 
-  componentWillUnmount() {
-  }
+  componentDidShow() {}
 
-  componentDidShow() {
-
-  }
-
-  componentDidHide() {
-  }
+  componentDidHide() {}
 
   navTo(url) {
     Taro.navigateTo({
       url: url
-    })
+    });
   }
 
   render() {
-
     return (
-      <View className='index' style={{display: "flex", fontSize: '14px',flexWrap:"wrap"}}>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/weather/index')}
+      <View
+        className='index'
+        style={{ display: "flex", fontSize: "14px", flexWrap: "wrap" }}
+      >
+        <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/weather/index")}
         >
           <Text>天气</Text>
         </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/tiku/index')}
+        {/* <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/tiku/index")}
         >
           <Text>题库</Text>
-        </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/cook/index')}
+        </View> */}
+        {/* <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/cook/index")}
         >
           <Text>菜谱</Text>
-        </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/wxArticle/index')}
+        </View> */}
+        <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/wxArticle/index")}
         >
           <Text>微信精选</Text>
         </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/history/index')}
+        {/* <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/history/index")}
         >
           <Text>历史今天</Text>
-        </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/car/index')}
+        </View> */}
+        {/* <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/car/index")}
         >
           <Text>汽车信息</Text>
-        </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/xinHuaDictionary/index')}
+        </View> */}
+        {/* <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/xinHuaDictionary/index")}
         >
           <Text>新华字典</Text>
-        </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/DoubanMovie/index')}
+        </View> */}
+        <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/DoubanMovie/index")}
         >
           <Text>豆瓣电影</Text>
         </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/36kr/index')}
+        <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/36kr/index")}
         >
           <Text>36氪快讯</Text>
         </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/zhihu/index')}
+        <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/zhihu/index")}
         >
           <Text>知乎日报</Text>
         </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/qqMusic/index')}
+        <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/qqMusic/index")}
         >
           <Text>QQ音乐</Text>
         </View>
-        <View style={{width: '25%', textAlign: "center", height: '40px', lineHeight: '40px'}}
-          onClick={this.navTo.bind(this, '/pages/tuChong/index')}
+        <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/tuChong/index")}
         >
           <Text>图虫</Text>
         </View>
+        <View
+          style={{
+            width: "25%",
+            textAlign: "center",
+            height: "40px",
+            lineHeight: "40px"
+          }}
+          onClick={this.navTo.bind(this, "/pages/gnyj/index")}
+        >
+          <Text>国内汽油</Text>
+        </View>
       </View>
-    )
+    );
   }
 }

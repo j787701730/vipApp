@@ -19,26 +19,26 @@ class App extends Component {
       'pages/weather/citys',
       'pages/weather/history',
       // 驾考
-      'pages/tiku/index',
-      'pages/tiku/kemu1',
-      'pages/tiku/kemu4',
-      'pages/tiku/category',
-      'pages/tiku/categoryContent',
+      // 'pages/tiku/index',
+      // 'pages/tiku/kemu1',
+      // 'pages/tiku/kemu4',
+      // 'pages/tiku/category',
+      // 'pages/tiku/categoryContent',
       // 菜谱
-      'pages/cook/index',
-      'pages/cook/cookMenu',
-      'pages/cook/cookDetail',
+      // 'pages/cook/index',
+      // 'pages/cook/cookMenu',
+      // 'pages/cook/cookDetail',
       // 微信精选
       'pages/wxArticle/index',
       'pages/wxArticle/content',
       // 历史上的今天
-      'pages/history/index',
+      // 'pages/history/index',
       // 汽车信息
-      'pages/car/index',
-      'pages/car/series',
-      'pages/car/detail',
+      // 'pages/car/index',
+      // 'pages/car/series',
+      // 'pages/car/detail',
       // 新华字典
-      'pages/xinHuaDictionary/index',
+      // 'pages/xinHuaDictionary/index',
       // 豆瓣电影
       'pages/DoubanMovie/index',
       'pages/DoubanMovie/movieDetail',
@@ -58,7 +58,8 @@ class App extends Component {
       'pages/tuChong/index',
       'pages/tuChong/discover',
       'pages/tuChong/category',
-
+      // 国内油价
+      'pages/gnyj/index',
     ],
     window: {
       backgroundTextStyle: 'light',
